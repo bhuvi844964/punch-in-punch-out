@@ -1,0 +1,39 @@
+ [
+    {
+      "id": 1,
+      "name": "Bhuvnesh Sharma",
+     "email": "bhuvi844964@gmail.com",
+     "password":"bhuvi@123",
+     "designation":"Developer"
+ 
+    },
+    {
+        "id": 2,
+        "name": "Shivam Sharma",
+       "email": "shivam844964@gmail.com",
+       "password":"bhuvi@123",
+       "designation":"React developer"
+    },
+    {
+        "id": 3,
+        "name": "Ajay Gurjar",
+       "email": "ajay844964@gmail.com",
+       "password":"bhuvi@123",
+       "designation":"Nodejs developer"
+     
+    },
+    {
+        "id": 4,
+        "name": "Prakash Kumar",
+       "email": "prakash844964@gmail.com",
+       "password":"bhuvi@123",
+       "designation":"Java developer"
+    },
+    {
+        "id": 5,
+        "name": "Lalit Sharma",
+       "email": "lalit844964@gmail.com",
+       "password":"bhuvi@123",
+       "designation":"Salesforce developer"
+    }
+  ]

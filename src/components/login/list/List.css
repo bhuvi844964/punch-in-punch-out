@@ -1,0 +1,5 @@
+.card{
+
+    display: inline-flex;
+    display:"-ms-inline-flexbox"
+}
