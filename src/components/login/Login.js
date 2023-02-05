@@ -1,79 +1,60 @@
-import React, { useEffect, useState  } from "react";
+import React, { useState } from "react";
+import { useForm } from 'react-hook-form';
 import { useNavigate} from "react-router-dom";
-
-
 import "./Login.css";
 
-const Login = ({people}) => {
+function Login({ people }) {
 
   const navigate = useNavigate();
-
   const [email, setEmail] = useState("");
- 
   const [password, setPassword] = useState("");
 
 
+  const { register, handleSubmit, formState: { errors }, } = useForm();
 
 
-  const loginUser =  (e) => {
-  
-   e.preventDefault()
+  const loginUser = (e) => {
+
+e.preventDefault()
+
     console.log(people)
 
 
-
-    let invalidUser = false
-
-     for(let i=0; i<=people.length; i++){
-
-       
-        if (people[i].email === email && people[i].password === password ) {
-
-            if(!invalidUser === true){
-
-                navigate("/list")
-            }
-       
-        } 
+    for(let i=0; i<=people.length; i++){
+      if (people[i].email === email && people[i].password === password ) {
+              navigate("/list")
+               break
+      } else if (people[i].email !== email && people[i].password !== password){
+alert("Invalid User")
+break
+      }else{
+        console.log("error")
+      }
    
-    } 
-    
-    if(!invalidUser){
-        alert("user not found")
-
-    }
-
-
-
-  };
-
-
+  }
+}
 
   return (
+    <form onSubmit={handleSubmit((people) => console.log(people))}>
     <div className="login-container">
       <div className="login-form">
         <h1>Login</h1>
-        <input
-          onChange={(e) => setEmail(e.target.value)}
-          type="text"
-          name="email"
-          placeholder="Email"
-          value={email}
-        />
-        <input
-          onChange={(e) => setPassword(e.target.value)}
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={password}
-        />
-        <button className="login-button" onClick={loginUser}>
+      <input {...register('email', { required: true })} name="email"
+        placeholder="Email"
+        value={email} onChange={(e) => setEmail(e.target.value)} type="text"  />
+      {errors.email  && <p className="bhuvi" >Email is required.</p>}
+      <input {...register('password', { required: true })} name="password"
+        placeholder="Password"
+        value={password} onChange={(e) => setPassword(e.target.value)} type="password" />
+      {errors.password && <p className="bhuvi">Email is required.</p>}
+      <button className="login-button" onClick={loginUser} >
           Login
         </button>
-      </div>
+        </div>
     </div>
+    </form>
   );
-  }
+}
 
 
 export default Login
