@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import data from './data.json';
+import { Route, Routes } from "react-router-dom";  
 import List from './components/login/list/List'
 import Navbar from './Navbar'
 import Login from './components/login/Login'
-import { Route, Routes } from "react-router-dom";  
+
 
 
 

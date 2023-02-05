@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState  } from "react";
 import { useForm } from 'react-hook-form';
 import { useNavigate} from "react-router-dom";
 import "./Login.css";
@@ -15,7 +15,7 @@ function Login({ people }) {
 
   const loginUser = (e) => {
 
-e.preventDefault()
+    e.preventDefault()
 
     console.log(people)
 
@@ -33,6 +33,8 @@ break
    
   }
 }
+
+
 
   return (
     <form onSubmit={handleSubmit((people) => console.log(people))}>
