@@ -1,22 +1,24 @@
 import React from 'react';
 import {
-  FaHome,
   FaUserFriends,
   FaFolderOpen,
   FaCalendarAlt,
   FaWpforms
 } from 'react-icons/fa';
+
+import { VscAccount } from "react-icons/vsc";
+
 export const links = [
   {
     id: 1,
-    url: '/',
-    text: 'home',
-    icon: <FaHome />,
+    url: '/list',
+    text: 'users',
+    icon: <VscAccount />,
   },
   {
     id: 2,
-    url: '/team',
-    text: 'team',
+    url: '/attendance',
+    text: 'all attendance',
     icon: <FaUserFriends />,
   },
   {

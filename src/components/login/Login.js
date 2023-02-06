@@ -25,16 +25,13 @@ function Login({ people }) {
               navigate("/list")
                break
       } else if (people[i].email !== email && people[i].password !== password){
-alert("Invalid User")
-break
+      alert("Check email and password")
+        break
       }else{
         console.log("error")
       }
-   
   }
 }
-
-
 
   return (
     <form onSubmit={handleSubmit((people) => console.log(people))}>
