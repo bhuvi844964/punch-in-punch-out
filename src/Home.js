@@ -1,4 +1,4 @@
-import React  from 'react';
+import React , { useState} from 'react';
 import { FaBars } from 'react-icons/fa';
 import { useGlobalContext } from './context';
 
@@ -7,17 +7,23 @@ import { useGlobalContext } from './context';
 
 const Home = () => {
 
-
-
-  const { openSidebar } = useGlobalContext();
-
+  const { openSidebar , closeSidebar } = useGlobalContext();
+  const [toggle, setToggle] = useState(true)
 
   return (
     <>
 
     <main>
-      <button onClick={openSidebar} className='sidebar-toggle'>
-      <FaBars />
+      <button onClick={openSidebar}  className='sidebar-toggle'>
+      <button  onClick={() => setToggle(!toggle)} className='sidebar-toggle'>
+      { toggle && 
+      <FaBars  />
+      }
+      { openSidebar && !toggle &&
+      <FaBars  />
+      }
+      </button>
+      
       </button>
     </main>
  

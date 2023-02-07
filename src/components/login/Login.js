@@ -12,17 +12,22 @@ function Login({ people }) {
 
   const { register, handleSubmit, formState: { errors }, } = useForm();
 
-
+ 
   const loginUser = (e) => {
+
+
+    localStorage.setItem('Email', email);
+    localStorage.setItem('Password', password);
+
 
     e.preventDefault()
 
     console.log(people)
-
+ 
 
     for(let i=0; i<=people.length; i++){
       if (people[i].email === email && people[i].password === password ) {
-              navigate("/list")
+              navigate("/attendance/:id")
                break
       } else if (people[i].email !== email && people[i].password !== password){
       alert("Check email and password")
@@ -32,6 +37,9 @@ function Login({ people }) {
       }
   }
 }
+
+
+
 
   return (
     <form onSubmit={handleSubmit((people) => console.log(people))}>

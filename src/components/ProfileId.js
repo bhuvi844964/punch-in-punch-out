@@ -1,25 +1,27 @@
 import React , { useEffect , useState} from 'react';
 import {useParams} from 'react-router-dom';
 
-const ProfileId = ({people}) => {
+const ProfileId = ({attend}) => {
 
-// console.log(people)
+  console.log(attend[0])
 
 const id = useParams().id;
 
-let [product, setProduct] = useState(people)
+let [user, setUser] = useState(attend)
 
-console.log(product)
+console.log(user)
 
 
-console.log(id)
+localStorage.setItem('id', attend[0].id);
+      
+
 
   return (
     <>
-  {people && people[0] &&
+  {attend && attend[0] &&
           <div className="container">
-           <h1>{people[0].name}</h1>
-              <table class="rwd-table">
+           <h1>{attend[0].name}</h1>
+              <table className="rwd-table">
                 <tbody>
                   <tr>
                     <th>Date</th>
@@ -27,9 +29,9 @@ console.log(id)
                     <th>Out Time</th>
                   </tr>
                     <tr>
-                    <td data-th="Invoice Date">{people[0].Date}</td>
-                    <td data-th="Due Date">{people[0].PunchIn}</td>
-                    <td data-th="Net Amount">{people[0].PunchOut}</td>
+                    <td data-th="Invoice Date">{attend[0].Date}</td>
+                    <td data-th="Due Date">{attend[0].PunchIn}</td>
+                    <td data-th="Net Amount">{attend[0].PunchOut}</td>
                   </tr>
                 </tbody>
               </table>

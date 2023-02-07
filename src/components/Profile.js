@@ -1,6 +1,6 @@
 import React  from "react";
 import './profile.css'
-import attend from '../data.json'
+import attend from '../components/data/attendance.json'
 
 
 const Profile = () => {
@@ -10,11 +10,11 @@ const Profile = () => {
   return (
     <>
     {attend.map((person) => {
-        const { id, name,Date ,PunchIn ,PunchOut} = person;
+        const { id, Date ,PunchIn ,PunchOut} = person;
         return (
           <div className="container">
-           <h1>{name}</h1>
-              <table class="rwd-table">
+           <h1>{id}</h1>
+              <table className="rwd-table">
                 <tbody>
                   <tr>
                     <th>Date</th>

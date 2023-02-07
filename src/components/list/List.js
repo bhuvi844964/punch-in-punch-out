@@ -1,20 +1,26 @@
-import React from 'react';
+import React , {useState} from 'react';
 import "./List.css"
-import { useNavigate  } from 'react-router-dom';
+import { useNavigate , useParams } from 'react-router-dom';
 
 
-const List = ({ people }) => {
+const List = ({ people ,attend }) => {
   const navigate = useNavigate();
+  
+  const id = useParams().id;
+  const [userData, setUserData] = useState(people);
+
+ 
 
   function onLinkClick(e) {
+ 
     e.preventDefault();
-       navigate("/attendance/:id");
+       navigate(`/attendance/${localStorage.getItem(id)}`);
  }
 
 
   return (
     <>
-      {people.map((person) => {
+      {userData.map((person) => {
         const { id, name, designation , image } = person;
         return (
               <div className="card" key={id} style={{width: "20rem"  }} >

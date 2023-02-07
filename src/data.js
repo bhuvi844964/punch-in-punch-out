@@ -1,13 +1,8 @@
 import React from 'react';
-import {
-  FaUserFriends,
-  FaFolderOpen,
-  FaCalendarAlt,
-  FaWpforms
-} from 'react-icons/fa';
+import { FaUserFriends} from 'react-icons/fa';
 
 import { VscAccount } from "react-icons/vsc";
-
+import { GiPunchBlast } from "react-icons/gi";
 export const links = [
   {
     id: 1,
@@ -23,21 +18,10 @@ export const links = [
   },
   {
     id: 3,
-    url: '/projects',
-    text: 'projects',
-    icon: <FaFolderOpen />,
+    url: '/punch',
+    text: 'punch',
+    icon: <GiPunchBlast />,
   },
-  {
-    id: 4,
-    url: '/calendar',
-    text: 'calendar',
-    icon: <FaCalendarAlt />,
-  },
-  {
-    id: 5,
-    url: '/documents',
-    text: 'documents',
-    icon: <FaWpforms />,
-  },
+  
 ];
 
