@@ -1,34 +1,30 @@
-import React , { useState} from 'react';
-import { FaBars } from 'react-icons/fa';
-import { useGlobalContext } from './context';
+import React from "react";
+import { FaBars } from "react-icons/fa";
+import { useGlobalContext } from "./context";
+// import img from "./punch.webp"
 
 
 
 
 const Home = () => {
-
-  const { openSidebar , closeSidebar } = useGlobalContext();
-  const [toggle, setToggle] = useState(true)
+  const { openSidebar } = useGlobalContext();
 
   return (
     <>
+      <main>
 
-    <main>
-      <button onClick={openSidebar}  className='sidebar-toggle'>
-      <button  onClick={() => setToggle(!toggle)} className='sidebar-toggle'>
-      { toggle && 
-      <FaBars  />
-      }
-      { openSidebar && !toggle &&
-      <FaBars  />
-      }
-      </button>
-      
-      </button>
-    </main>
- 
+        <button onClick={openSidebar} className="sidebar-toggle">
+          <button className="sidebar-toggle">
+            <FaBars />
+          </button>
+        </button>
+      </main>
     </>
   );
 };
 
 export default Home;
+
+
+
+// <img src={img} alt='img' />

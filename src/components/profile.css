@@ -20,6 +20,12 @@
   border-bottom: 1px solid #ddd;
   background-color: #f5f9fc;
 }
+.rwd-table td {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background-color: #f5f9fc;
+  color: #000;
+}
 
 .rwd-table tr:nth-child(odd):not(:first-child) {
   background-color: #ebf3f9;
@@ -112,6 +118,8 @@ background: linear-gradient(to left, #4B79A1 , #283E51);
 .container {
   display: block;
   text-align: center;
+  top: 120px;
+
 }
 
 @-webkit-keyframes leftRight {

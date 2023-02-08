@@ -7,12 +7,12 @@ export const links = [
   {
     id: 1,
     url: '/list',
-    text: 'users',
+    text: 'profile',
     icon: <VscAccount />,
   },
   {
     id: 2,
-    url: '/attendance',
+    url: `/attendance/${localStorage.getItem("id")}`,
     text: 'all attendance',
     icon: <FaUserFriends />,
   },

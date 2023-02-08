@@ -1,4 +1,4 @@
-import React  from 'react'
+import React , { useState} from 'react'
 import "bootstrap/dist/css/bootstrap.css"
 import { NavLink } from 'react-router-dom'
 
@@ -6,6 +6,18 @@ import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
    
+
+    const [toggle, setToggle] = useState(true)
+
+
+    function onLinkClickOut() {
+   
+        localStorage.clear();
+       
+     }
+
+
+
 
         return (
             <>
@@ -17,10 +29,16 @@ const Navbar = () => {
                         </button>
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                           {!toggle &&
                                 <li className="nav-item">
-                                    <NavLink className="nav-link" to="/Login">Login</NavLink>
+                                    <NavLink onClick={onLinkClickOut} className="nav-link" to="/Login">Login</NavLink>
                                 </li>
-    
+                           }
+                                {toggle &&
+                                <li className="nav-item">
+                                    <NavLink onClick={() => setToggle(!toggle)}  className="nav-link" to="/Login">Logout</NavLink>
+                                </li>
+                                }
                             </ul>
     
                         </div>

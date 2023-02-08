@@ -1,6 +1,6 @@
 import React, { useState  } from "react";
 import { useForm } from 'react-hook-form';
-import { useNavigate} from "react-router-dom";
+import { useNavigate , useParams} from "react-router-dom";
 import "./Login.css";
 
 function Login({ people }) {
@@ -8,17 +8,18 @@ function Login({ people }) {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  
 
+  const id = useParams().id;
 
   const { register, handleSubmit, formState: { errors }, } = useForm();
 
  
   const loginUser = (e) => {
 
-
     localStorage.setItem('Email', email);
     localStorage.setItem('Password', password);
-
+  
 
     e.preventDefault()
 
@@ -27,7 +28,9 @@ function Login({ people }) {
 
     for(let i=0; i<=people.length; i++){
       if (people[i].email === email && people[i].password === password ) {
-              navigate("/attendance/:id")
+        localStorage.setItem('id', people[i].id);
+        navigate("/list")
+             
                break
       } else if (people[i].email !== email && people[i].password !== password){
       alert("Check email and password")

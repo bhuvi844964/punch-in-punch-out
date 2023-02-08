@@ -1,9 +1,18 @@
 .card{
 
-    float: left;
-    display:-ms-inline-flexbox;
-    flex-direction:row;
-    
+    width:30%;
+    text-align: center;
+    display: flex;
+
+ padding: 30px;
+    justify-content: center;
+
+    justify-content: center;
+align-content: center;
+
+margin: auto;
+top: 120px;
+
 }
 
 
