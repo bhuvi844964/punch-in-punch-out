@@ -15,4 +15,15 @@ top: 120px;
 
 }
 
+.pop{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 
+}
+
+.size {
+    width: 800px;
+}

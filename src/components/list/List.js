@@ -1,5 +1,7 @@
 import React , {useState} from 'react';
 import "./List.css"
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
 import { useNavigate , useParams } from 'react-router-dom';
 
 
@@ -20,6 +22,7 @@ const List = ({ people  }) => {
 
   return (
     <>
+    
       {userData.map((person) => {
         const { id, name, designation , image , email } = person;
         if(id == localStorage.getItem("id") ){
@@ -36,11 +39,22 @@ const List = ({ people  }) => {
 
         );
         }else{ return
-    
        }
       })}
+
     </>
   );
 };
 
 export default List;
+
+
+
+// { id !== localStorage.getItem("id") &&
+// <div  className='pop'>
+//   <Popup  open={id !== localStorage.getItem("id")} position="right center">
+//     <h1 className='size'>Login please !!</h1>
+//   </Popup>
+//   </div>
+
+// }

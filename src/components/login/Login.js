@@ -42,8 +42,6 @@ function Login({ people }) {
 }
 
 
-
-
   return (
     <form onSubmit={handleSubmit((people) => console.log(people))}>
     <div className="login-container">

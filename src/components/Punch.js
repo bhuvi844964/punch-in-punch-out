@@ -1,11 +1,15 @@
-import React , {useState} from 'react'
+import React, { useState, useEffect } from 'react';
 import img from '../punch.webp'
+// import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
+import {useParams} from 'react-router-dom';
 
 const Punch = () => {
 
-  const [punchIn, setIn] = useState("");
-  const [punchOut, setOut] = useState("");
-  
+ 
+  const [user, setUser] = useState([{}]);
+
+
   const [toggle, setToggle] = useState(true)
   const [toggleOut, setToggleOut] = useState(true)
   const date = new Date().toLocaleDateString();
@@ -13,18 +17,44 @@ const Punch = () => {
   const punchOuttime = new Date().toLocaleTimeString();
 
  
+  const id = useParams().id;
+
   localStorage.setItem('date', date);
+
+  
+
+  useEffect(() => {
+
+  user.date =  localStorage.getItem('date')
+  user.punchIn =  localStorage.getItem('punchIn')
+  user.punchOut = localStorage.getItem('punchOut')
+  user.id = localStorage.getItem('id')
+
+  }, []);
+
+
+
+  useEffect(() => {
+    if (user.length > 0){
+      user.push(localStorage.setItem('user', JSON.stringify(user)))
+    }
+
+  }, [user]);
+ 
+  
+
+  console.log(localStorage.getItem('user'))
 
 
   function onLinkClickIn(e) {
  
     e.preventDefault();
-
+   
     localStorage.setItem('punchIn', punchIntime);
 
     setToggle(!toggle)  
-
-
+   
+    
 
  }
 
@@ -35,13 +65,18 @@ const Punch = () => {
     localStorage.setItem('punchOut', punchOuttime);
 
       setToggleOut(!toggleOut)
-   
+    
  }
 
-  
+
 
   return (
+
+
+<>
+
     <div className="container">
+  
   <h1>Attendance Punching <i className="fas fa-user-clock"></i>Machine</h1>
   
   <div className="row col-12">
@@ -89,10 +124,24 @@ const Punch = () => {
       </table>
     </div> 
     )}
+
   </div> 
 </div>
-    
+  
+</>     
   )
+    
 }
 
 export default Punch
+
+
+
+// { id !== localStorage.getItem("id") &&
+// <div  className='pop'>
+//   <Popup  open={id !== localStorage.getItem("id")} position="right center">
+//     <h1 className='size'>Login please !!</h1>
+//   </Popup>
+//   </div>
+
+// }

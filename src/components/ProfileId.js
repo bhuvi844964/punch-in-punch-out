@@ -1,6 +1,10 @@
 import React , { useEffect , useState} from 'react';
 import '../components/profile.css'
 import {useParams} from 'react-router-dom';
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
+
+
 
 const ProfileId = ({attend}) => {
 
@@ -18,6 +22,7 @@ console.log(user)
 
   return (
     <>
+  
   <div className="container">
   <table className="rwd-table">
     <tbody>
@@ -26,16 +31,18 @@ console.log(user)
     <th>In Time</th>
     <th>Out Time</th>
   </tr>
+  { localStorage.getItem('id') == id && 
 <tr>
-                <td >{localStorage.getItem("date")}</td>
-                 <td >{localStorage.getItem("punchIn")}</td>
-                 <td >{localStorage.getItem("punchOut")}</td>
+      <td >{localStorage.getItem("date")}</td>
+       <td >{localStorage.getItem("punchIn")}</td>
+       <td >{localStorage.getItem("punchOut")}</td>
 </tr>
-
-
+  }
     </tbody>
   </table>
 </div>
+ 
+    
     {attend.map((person) => {
       const { id, Date ,PunchIn , PunchOut  } = person;
       if(id == localStorage.getItem("id") ){
@@ -58,6 +65,11 @@ console.log(user)
       );
       }else{ return }
     })}
+
+   
+
+
+
     </>
   )
 }
@@ -65,7 +77,14 @@ console.log(user)
 export default ProfileId
 
 
+// { id !== localStorage.getItem("id") &&
+// <div  className='pop'>
+//   <Popup  open={id !== localStorage.getItem("id")} position="right center">
+//     <h1 className='size'>Login please !!</h1>
+//   </Popup>
+//   </div>
 
+// }
 
 // {attend && attend[0] &&
   // <div className="container">

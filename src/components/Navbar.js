@@ -1,4 +1,4 @@
-import React , { useState} from 'react'
+import React, { useState } from 'react';
 import "bootstrap/dist/css/bootstrap.css"
 import { NavLink } from 'react-router-dom'
 
@@ -6,14 +6,22 @@ import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
    
-
+   
     const [toggle, setToggle] = useState(true)
 
 
     function onLinkClickOut() {
    
-        localStorage.clear();
-       
+        localStorage.removeItem('Email');
+        localStorage.removeItem('Password');
+        localStorage.removeItem('id');
+        localStorage.removeItem('date');
+        localStorage.removeItem('punchIn');
+        localStorage.removeItem('punchOut');
+
+      
+        // localStorage.clear();
+
      }
 
 
@@ -50,3 +58,5 @@ const Navbar = () => {
 
 
 export default Navbar
+
+
