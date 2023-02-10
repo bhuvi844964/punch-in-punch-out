@@ -9,7 +9,7 @@ import Home from './Home'
 import Sidebar from './components/Sidebar'
 import ProfileId from './components/ProfileId'
 import Punch from './components/Punch'
-import Logout from './components/Logout'
+
 
 
 
@@ -21,14 +21,13 @@ function App() {
   
   return (
     <>
-        <Navbar/>
+        <Navbar people={people}/>
        
       <Routes>
         <Route path="/login" element={<Login  people={people}/>} />
         <Route path="/list" element={<List people={people} />} />
         <Route path="/attendance/:id" element={<ProfileId  attend={attend}  people={people}  />} />
         <Route path="/punch" element={<Punch  attend={attend} />} />
-        <Route path="/Logout" element={<Logout />} />
       </Routes>
       <Sidebar/>
       <Home />

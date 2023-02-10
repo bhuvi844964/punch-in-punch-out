@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import "bootstrap/dist/css/bootstrap.css"
-import { NavLink } from 'react-router-dom'
+import { NavLink , useNavigate  } from 'react-router-dom'
 
 
 
-const Navbar = () => {
+const Navbar = ({people}) => {
    
-   
+    const navigate = useNavigate();
     const [toggle, setToggle] = useState(true)
 
 
@@ -18,17 +18,14 @@ const Navbar = () => {
         localStorage.removeItem('date');
         localStorage.removeItem('punchIn');
         localStorage.removeItem('punchOut');
+        localStorage.removeItem('session');
 
-      
-        // localStorage.clear();
 
      }
 
-
-
-
         return (
             <>
+            {localStorage.getItem('Email') &&
                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
                     <div className="container-fluid">
                         
@@ -37,21 +34,20 @@ const Navbar = () => {
                         </button>
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-                           {!toggle &&
+                          
                                 <li className="nav-item">
-                                    <NavLink onClick={onLinkClickOut} className="nav-link" to="/Login">Login</NavLink>
+                                    <NavLink onClick={onLinkClickOut}  className="nav-link" to="/Login">Logout</NavLink>
                                 </li>
-                           }
-                                {toggle &&
-                                <li className="nav-item">
-                                    <NavLink onClick={() => setToggle(!toggle)}  className="nav-link" to="/Login">Logout</NavLink>
-                                </li>
-                                }
+                                
                             </ul>
     
                         </div>
                     </div>
                 </nav>
+        }
+        {!localStorage.getItem('Email')
+           
+        }
                 </>
                ) 
     }

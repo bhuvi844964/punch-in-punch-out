@@ -134,3 +134,18 @@ background: linear-gradient(to left, #4B79A1 , #283E51);
   75%   { transform: translateX(10px)}
   100%  { transform: translateX(0)}
 }
+
+.bt-bhuvi{
+  padding: .75rem 3rem;
+  border-radius: 10px;
+  background-color: #0081C9;
+  color:white;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.bt-bhuvi>button:hover{
+  background-color: #0083c979
+}
+
+
+

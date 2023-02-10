@@ -18,6 +18,12 @@ const List = ({ people  }) => {
     e.preventDefault();
        navigate(`/attendance/${localStorage.getItem("id")}`);
  }
+  function onLogin(e) {
+ 
+    e.preventDefault();
+       navigate('/login')
+ }
+
 
 
   return (
@@ -38,9 +44,18 @@ const List = ({ people  }) => {
           </div>
 
         );
-        }else{ return
-       }
+        }else{ return}
       })}
+
+ { id == localStorage.getItem("id") &&
+<div  className='pop'>
+  <Popup  open={id !== localStorage.getItem("id")} position="right center">
+    <h1 className='size'>Login please !!</h1>
+  </Popup>
+  <button className='bt-bhuvi' onClick={onLogin}>Go to login page</button>
+  </div>
+
+}
 
     </>
   );
@@ -50,11 +65,3 @@ export default List;
 
 
 
-// { id !== localStorage.getItem("id") &&
-// <div  className='pop'>
-//   <Popup  open={id !== localStorage.getItem("id")} position="right center">
-//     <h1 className='size'>Login please !!</h1>
-//   </Popup>
-//   </div>
-
-// }

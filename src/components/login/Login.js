@@ -36,7 +36,7 @@ function Login({ people }) {
       alert("Check email and password")
         break
       }else{
-        console.log("error")
+        
       }
   }
 }

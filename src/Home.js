@@ -1,7 +1,8 @@
 import React from "react";
 import { FaBars } from "react-icons/fa";
+import Login from "./components/login/Login";
 import { useGlobalContext } from "./context";
-// import img from "./punch.webp"
+
 
 
 
@@ -16,9 +17,12 @@ const Home = () => {
         <button onClick={openSidebar} className="sidebar-toggle">
           <button className="sidebar-toggle">
             <FaBars />
+           
           </button>
         </button>
+      
       </main>
+      <Login/>
     </>
   );
 };

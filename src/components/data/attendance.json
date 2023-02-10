@@ -3,91 +3,106 @@
     "id": 1,
     "Date": "2/8/2023",
     "PunchIn": "10:10:30 AM",
-    "PunchOut": "7:10:00 PM"
+    "PunchOut": "07:10:00 PM",
+    "session": "9:05:30"
   },
   {
     "id": 1,
     "Date": "2/8/2023",
     "PunchIn": "11:10:30 AM",
-    "PunchOut": "7:10:00 PM"
+    "PunchOut": "07:10:00 PM",
+    "session": "08:00:30"
      
   },
   {
     "id": 1,
     "Date": "2/8/2023",
-    "PunchIn": "9:10:30 AM",
-    "PunchOut": "7:10:00 PM"
+    "PunchIn": "12:10:30 AM",
+    "PunchOut": "07:10:00 PM",
+    "session": "07:00:30"
   },
   {
     "id": 2,
     "Date": "2/8/2023",
     "PunchIn": "10:00:30 AM",
-    "PunchOut": "7:30:00 PM"
+    "PunchOut": "07:30:00 PM",
+    "session": "08:30:30"
+  },
+  {
+    "id": 2,
+    "Date": "2/8/2023",
+    "PunchIn": "09:00:00 AM",
+    "PunchOut": "06:00:00 PM",
+    "session": "09:05:00"
   },
   {
     "id": 2,
     "Date": "2/8/2023",
     "PunchIn": "10:00:30 AM",
-    "PunchOut": "7:30:00 PM"
-  },
-  {
-    "id": 2,
-    "Date": "2/8/2023",
-    "PunchIn": "10:00:30 AM",
-    "PunchOut": "7:30:00 PM"
+    "PunchOut": "07:30:00 PM",
+    "session": "06:05:00"
   },
   {
     "id": 3,
     "Date": "2/8/2023",
     "PunchIn": "10:20:30 AM",
-    "PunchOut": "7:00:00 PM"
+    "PunchOut": "07:00:00 PM",
+    "session": "06:05:00"
   },
   {
     "id": 3,
     "Date": "2/8/2023",
     "PunchIn": "10:20:30 AM",
-    "PunchOut": "7:00:00 PM"
+    "PunchOut": "07:00:00 PM",
+    "session": "06:05:00"
   },
   {
     "id": 3,
     "Date": "2/8/2023",
     "PunchIn": "10:20:30 AM",
-    "PunchOut": "7:00:00 PM"
+    "PunchOut": "07:00:00 PM",
+    "session": "06:05:00"
   },
   {
     "id": 4,
     "Date": "2/8/2023",
-    "PunchIn": "7:10:30 AM",
-    "PunchOut": "6:45:00 PM"
+    "PunchIn": "07:10:30 AM",
+    "PunchOut": "06:45:00 PM",
+    "session": "10:25:30"
   },
   {
     "id": 4,
     "Date": "2/8/2023",
-    "PunchIn": "8:10:30 AM",
-    "PunchOut": "6:45:00 PM"
+    "PunchIn": "08:10:30 AM",
+    "PunchOut": "06:45:00 PM",
+    "session": "09:25:30"
   },
   {
     "id": 4,
     "Date": "2/8/2023",
     "PunchIn": "10:10:30 AM",
-    "PunchOut": "6:45:00 PM"
+    "PunchOut": "06:45:00 PM",
+    "session": "07:25:30"
   },
   {
     "id": 5,
     "Date": "2/8/2023",
-    "PunchIn": "9:30:10 AM",
-    "PunchOut": "7:00:00 PM"
+    "PunchIn": "09:30:10 AM",
+    "PunchOut": "07:00:00 PM",
+    "session": "06:05:00"
   },
   {
     "id": 5,
     "Date": "2/8/2023",
-    "PunchIn": "9:30:10 AM",
-    "PunchOut": "7:00:00 PM"
+    "PunchIn": "09:30:10 AM",
+    "PunchOut": "07:00:00 PM",
+    "session": "07:05:00"
   },
   {
     "id": 5,
     "Date": "2/8/2023",
-    "PunchIn": "9:30:10 AM",
-    "PunchOut": "7:00:00 PM"
+    "PunchIn": "09:30:10 AM",
+    "PunchOut": "07:00:00 PM",
+    "session": "05:05:00"
   }
 ]
