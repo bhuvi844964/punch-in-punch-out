@@ -9,6 +9,8 @@ import Home from './Home'
 import Sidebar from './components/Sidebar'
 import ProfileId from './components/ProfileId'
 import Punch from './components/Punch'
+import Signup from './components/signup/Signup'
+import Error from './components/Error'
 
 
 
@@ -24,10 +26,12 @@ function App() {
         <Navbar people={people}/>
        
       <Routes>
-        <Route path="/login" element={<Login  people={people}/>} />
-        <Route path="/list" element={<List people={people} />} />
+        <Route path="/login" element={<Login/>} />
+        <Route path="/list" element={<List/>} />
         <Route path="/attendance/:id" element={<ProfileId  attend={attend}  people={people}  />} />
         <Route path="/punch" element={<Punch  attend={attend} />} />
+        <Route path="/Signup" element={<Signup />} />
+        <Route path="*" element={<Error />} />
       </Routes>
       <Sidebar/>
       <Home />
